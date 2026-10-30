@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="nb">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Været</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <header class="top">
+            <svg class="pumpkin" viewBox="0 0 120 110" aria-hidden="true">
+                <path d="M60 24c3-10 8-14 16-16" stroke="#6bbf2a" stroke-width="8" fill="none" stroke-linecap="round" />
+                <ellipse cx="32" cy="64" rx="26" ry="38" fill="#c9540a" />
+                <ellipse cx="88" cy="64" rx="26" ry="38" fill="#c9540a" />
+                <ellipse cx="60" cy="64" rx="30" ry="42" fill="#ff8a1f" />
+                <path d="M38 58l10-16 10 16zM62 58l10-16 10 16z" fill="#120a1c" />
+                <path d="M36 74l8 12 8-8 8 10 8-10 8 8 8-12q-24-8-48 0z" fill="#120a1c" />
+            </svg>
+            <h1>Været</h1>
+            <span class="place">Halden</span>
+        </header>
+
+        <div id="msg">Henter været for Halden …</div>
+
+        <div id="app" hidden>
+            <section class="now">
+                <div class="nowmain">
+                    <div class="temp" id="temp"></div>
+                    <div>
+                        <div class="cond" id="cond"></div>
+                        <div class="hl" id="hl"></div>
+                    </div>
+                </div>
+                <dl class="nowfacts">
+                    <div>
+                        <dt>Vind</dt>
+                        <dd id="wind"></dd>
+                    </div>
+                    <div>
+                        <dt>Luftfuktighet</dt>
+                        <dd id="hum"></dd>
+                    </div>
+                    <div>
+                        <dt>Nedbør neste time</dt>
+                        <dd id="rain"></dd>
+                    </div>
+                    <div>
+                        <dt>Lufttrykk</dt>
+                        <dd id="pres"></dd>
+                    </div>
+                </dl>
+            </section>
+
+            <nav class="tabs" id="tabs" aria-label="Velg dag"></nav>
+
+            <section class="detail">
+                <h2 id="dayTitle"></h2>
+                <dl class="stats" id="dayStats"></dl>
+                <div class="rows head">
+                    <span>Tid</span><span></span><span>Temp</span><span>Nedbør</span><span>Vind</span><span>Fukt</span>
+                </div>
+                <div id="rows"></div>
+            </section>
+
+            <p class="foot" id="foot"></p>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
